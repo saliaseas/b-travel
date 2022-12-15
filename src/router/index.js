@@ -1,12 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Welcome from "../views/Welcome.vue";
+import Authorization from "../views/Authorization.vue";
 import Chatroom from "../views/Chatroom.vue";
 
 const routes = [
   {
     path: '/',
-    name: 'Welcome',
-    component: Welcome
+    name: 'Authorization',
+    component: Authorization
   },
   {
     path: '/chatroom',

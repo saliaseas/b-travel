@@ -1,16 +1,14 @@
 <template>
   <div class="container">
     <Navbar />
-    <NewChatRoom/>
+    <h2>hello</h2>
   </div>
 </template>
 
 <script>
-import NewChatRoom from "@/components/NewChatRoom.vue";
 import Navbar from "../components/Navbar.vue"
 export default {
-    components: { Navbar, NewChatRoom },
-
+    components: { Navbar}
     }
 </script>
 

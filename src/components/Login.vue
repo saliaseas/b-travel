@@ -1,40 +1,27 @@
 <template>
-  <form @submit.prevent="handleSubmit">
-    <input v-model="email" placeholder="Email" required type="email">
-    <input v-model="password" placeholder="Password" required type="password">
-    <button>Login</button>
-  </form>
+  <div @submit.prevent="handleSubmit">
+    <input v-model="email" placeholder="Email" required type="email" />
+    <input v-model="password" placeholder="Password" required type="password" />
+    <button>Sign In</button>
+  </div>
 </template>
 
 <script>
-import { ref } from '@vue/reactivity'
-import { useLogin } from "@/composables/useLogin";
-import { useRouter } from 'vue-router';
+import { ref } from "@vue/reactivity";
 export default {
-    setup(props, {emit}) {
-        const email = ref("");
-        const password = ref("");
-        
+  setup(props, { emit }) {
+    const handleSubmit = async () => {
+      if (user) {
+        emit("talgat");
+      }
+    };
 
-        const handleSubmit = async () => {
-          const user = await useLogin(email.value,password.value);
-          if(user){
-            emit("talgat")
-          }
-
-
-        }
-
-        return {
-            email,
-            password,
-            handleSubmit
-        }
-    }
-
-}
+    return {
+      handleSubmit,
+    };
+  },
+};
 </script>
 
-<style>
-
+<style lang="scss">
 </style>
