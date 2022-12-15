@@ -1,4 +1,4 @@
-# vue-chat
+# b-travel
 
 ## Project setup
 ```
